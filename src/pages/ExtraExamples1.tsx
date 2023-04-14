@@ -26,6 +26,7 @@ import IMG_CYPHER_EX1 from "../assets/images/cypher_ex1.png";
 import IMG_QUERY_OPT1 from "../assets/images/query_opt1.png";
 import IMG_QUERY_OPT2 from "../assets/images/query_opt2.png";
 import IMG_2PL_EXTRA_1 from "../assets/images/2pl_extra_1.png";
+import IMG_SQL_SETS from "../assets/images/sql_sets.png";
 export const ExtraExamples1: React.FC<{}> = () => {
     return (
         <A4Paper>
@@ -51,6 +52,8 @@ export const ExtraExamples1: React.FC<{}> = () => {
                 <PageSection>
                     <InfoH3>Concurrency: 2 Phase Locking Extra Example</InfoH3>
                     <Image src={IMG_2PL_EXTRA_1} />
+                    <ExampleH3>Sets in SQL</ExampleH3>
+                    <Image src={IMG_SQL_SETS} />
                 </PageSection>
 
             </PageTwoColumn>
