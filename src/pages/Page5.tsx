@@ -135,13 +135,13 @@ export const Page5: React.FC<{}> = () => {
               <tr>
                 <td>Nested Loop Join</td>
                 <td>Cost = #OuterPages + |OuterTable| × #InnerPages</td>
-                <td>500 + 40,000 × 1,000</td>
+                <td>For each record in the outer table, iterate through all records in the inner table and check for matches.</td>
                 <td>Most straightforward but naive approach</td>
               </tr>
               <tr>
                 <td>Page-oriented Nested Loop Join</td>
                 <td>Cost = #OuterPages + #OuterPages × #InnerPages</td>
-                <td>500 + 500 × 1,000</td>
+                <td>Iterate through pages of both tables and then iterate through records on each page to find matches.</td>
                 <td>Improved over nested loop join, but still high cost</td>
               </tr>
               <tr>
@@ -149,7 +149,7 @@ export const Page5: React.FC<{}> = () => {
                 <td>
                   Cost = #OuterPages + (#OuterPages/#BufferPages) * #InnerPages
                 </td>
-                <td>500 + 500 / 50 × 1,000</td>
+                <td>Load multiple pages from the outer table into memory and compare them to inner table pages.</td>
                 <td>Utilizes buffer space for in-memory joins</td>
               </tr>
               <tr>
@@ -158,7 +158,7 @@ export const Page5: React.FC<{}> = () => {
                   Cost = OuterPages + |OuterTable| × cost of finding tuples
                   using index
                 </td>
-                <td>1,000 + 100,000 × (1 leaf page + 1 data page)</td>
+                <td>Use an index on the inner table's join attribute to quickly find matching records.</td>
                 <td>Uses index on inner table's join attribute</td>
               </tr>
               <tr>
@@ -175,7 +175,7 @@ export const Page5: React.FC<{}> = () => {
               <tr>
                 <td>Hash Join</td>
                 <td>Depends on hashing function and partition sizes</td>
-                <td>Varies based on hashing function and buffer frames</td>
+                <td>Hash records of both tables based on join attribute, then load and search partitions.</td>
                 <td>Popular algorithm used in many database systems</td>
               </tr>
             </tbody>
