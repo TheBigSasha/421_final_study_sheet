@@ -154,10 +154,13 @@ export const Page6: React.FC<{}> = () => {
             </li>
           </ul>
           <InfoBox>
+            <p>
+            <h4>Map Reduce Overall Timeline (full)</h4>
             The net process can be described as: Record reader → map function →
-            (possibly) combine function → write to local file → Group keys and
+              (possibly) <strong>combine</strong> function → write to local file → Group keys and
             aggregate value lists → copy from map location to reduce location →
             Reduce function → write to output DFS
+            </p>
           </InfoBox>
           <InfoBox>
             <p>
@@ -203,6 +206,7 @@ export const Page6: React.FC<{}> = () => {
           <Image src={IMG_MR_EX1_BOTH} />
           <InfoBox>
             <p>
+              <h4>I/O of Map Reduce</h4>
               Note that the output of one map-reduce job can be used as an input
               to another map-reduce job. It can be thought of as similar to
               pipelining.
@@ -290,7 +294,7 @@ export const Page6: React.FC<{}> = () => {
           </ul>
           <InfoBox>
             <p>
-              {" "}
+              <h4>Dummy Values when no useful key</h4>
               Note that in order to maintain the data in the form of key-value
               pairs (which is essential for map-reduce framework), we have to
               put some dummy value in places where we don’t require any value.
@@ -327,6 +331,7 @@ export const Page6: React.FC<{}> = () => {
                       </p>
                       <InfoBox>
                         <p>
+                          <h4>Clarification of example</h4>
                           Note that the <code>R</code> and <code>Q</code> in the
                           output are just indicator values (could be just a{" "}
                           <code>CHAR</code> value or something small like that)

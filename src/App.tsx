@@ -24,6 +24,7 @@ import { Page7 } from "./pages/Page7";
 import { Page8 } from "./pages/Page8";
 import {Example, HowTo, HowToH3, Info, InfoH3} from "./components/QuickSymbols";
 import {InfoBox, WarningBox} from "./components/ThemedBoxes";
+import {ExtraExamples1} from "./pages/ExtraExamples1";
 
 function App() {
   const [showHelp, setShowHelp] = useState(false);
@@ -144,9 +145,10 @@ function App() {
       <Page7 />
       <h1>Page 8</h1>
       <Page8 />
-
+        <h1>Extra Examples 1</h1>
+        <ExtraExamples1/>
       <h1>Test Page</h1>
-      <TestPage />
+      <TestPage  />
 
       <div style={{ height: 25 }}></div>
       <p style={{ maxWidth: "8.5in" }}>

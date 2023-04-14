@@ -9,6 +9,14 @@ export const PageColumns = styled.div`
   margin-top: ${HEADER_HEIGHT};
 `;
 
+export const PageTwoColumn = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2mm;
+    margin-top: ${HEADER_HEIGHT};
+`;
+
+
 export const TwoColumn = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -162,6 +162,8 @@ export const Page2: React.FC<{}> = () => {
             <Latex>{`R \$\\setminus\$ S`}</Latex>
             <p>Keep only tuples in R but not S</p>
           </KeyValue>
+        </PageSection>
+        <PageSection>
           <InfoH3>Rules of Combinations of Operators</InfoH3>
           <KeyValue value={"Associativity"}>
             <Latex>{`\$R_1 \\bowtie (R_2 \\bowtie R_3) = (R_1 \\bowtie R_2) \\bowtie R_3\$`}</Latex>
@@ -175,8 +177,7 @@ export const Page2: React.FC<{}> = () => {
           <KeyValue value={"Idempotence"}>
             <Latex>{`\$\\Pi_{L_2}(\\Pi_{L_1}(R)) = \\Pi_{L_2}(R)\$ only if \$L_2 \\sube L_1\$`}</Latex>
           </KeyValue>
-        </PageSection>
-        <PageSection>
+
           <InfoH3>Composition of Operators</InfoH3>
           There are two main ways of doing this:
           <ul>

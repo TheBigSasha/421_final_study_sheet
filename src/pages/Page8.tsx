@@ -86,6 +86,16 @@ export const Page8: React.FC<{}> = () => {
           The transaction to abort can be chosen <strong>randomly</strong> or
           using some <strong>other heuristics</strong> such as the youngest
           transaction, etc.
+          <InfoBox>
+            <p>
+            <h4>Dependency vs Wait-For Graph</h4> If there is an edge from T2 to T1 in the wait-for-graph, then T2’s operation will execute after T1’s operation (T2 waits for T1 to release the lock), hence, in the dependency graph there is an edge from T1 to T2</p>
+          </InfoBox>
+          <WarningBox>
+            <p>
+              <h4>Regarding lost update & Commit</h4>
+              An update can still be considered lost if it is committed and then overwritten by another transaction.
+            </p>
+          </WarningBox>
           <InfoH3>Graph Databases</InfoH3>
           <KeyValue value={"Node / Vertex"}>
             Represent single entities. Can have properties.
@@ -117,9 +127,9 @@ export const Page8: React.FC<{}> = () => {
               language.
             </p>
           </InfoBox>
-          <Image style={{ width: "80%" }} src={IMG_GRAPH_DB} />
         </PageSection>
         <PageSection>
+          <Image style={{ width: "100%" }} src={IMG_GRAPH_DB} />
           <HowToH3>Writing Queries in Cypher</HowToH3>
           <ol>
             <li>

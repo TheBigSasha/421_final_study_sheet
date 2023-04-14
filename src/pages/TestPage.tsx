@@ -25,7 +25,7 @@ import {InfoBox, WarningBox} from "../components/ThemedBoxes";
 
 export const TestPage: React.FC<{}> = () => {
   return (
-    <A4Paper>
+    <A4Paper className={"no-print"}>
       <PageHeader>
         <span>
           Page <LatexSymbol symbol={"aleph_0"} /> - Test Page

@@ -103,8 +103,15 @@ export const Page1: React.FC<{}> = () => {
           <KeyValue value={"Thicc Arrow"}>
             Total participation constraint.   @OneToOne @NotNull
           </KeyValue>
-
-
+          <KeyValue value={"Dotted Underline"}>
+            Partial key of weak entity (defined only as an aspect of another entity)
+          </KeyValue>
+          <InfoBox>
+            <p>
+              <h4>Artificial key</h4>
+              This term does not refer to anything technical, just that the key has no meaning and is auto generated.
+            </p>
+          </InfoBox>
           <InfoBox>
             relation = table; instances = rows; columns = attributes
           </InfoBox>

@@ -303,6 +303,12 @@ export const Page4: React.FC<{}> = () => {
             If people indicate 250 there must be some explanation together with
             the number.
           </p>
+          <InfoBox>
+            <p>
+              <h4>How long does it take to find on average?</h4>
+              For a unique field with no indexing or sorting, avg n/2. For any field, avg n. Sorted, avg log n. Index, avg log n.
+            </p>
+          </InfoBox>
         </PageSection>
         <PageSection>
           <InfoH3>Static Hash Indexes</InfoH3>
